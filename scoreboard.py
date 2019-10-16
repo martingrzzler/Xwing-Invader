@@ -1,6 +1,8 @@
 import pygame.font
 from pygame.sprite import Group
 
+import json
+
 from ship import Ship
 
 class Scoreboard:
@@ -82,3 +84,5 @@ class Scoreboard:
         if self.stats.score > self.stats.high_score:
             self.stats.high_score = self.stats.score
             self.prep_high_score()    
+            with open(self.stats.filename, 'w') as f:
+                json.dump(self.stats.high_score, f)
