@@ -60,6 +60,7 @@ class Settings:
         '''Increase speed settings and alien point values.'''
         self.ship_speed *= self.speedup_scale
         self.bullet_speed *= self.speedup_scale
+        self.alien_bullet_speed *= self.speedup_scale
         self.alien_speed *= self.speedup_scale
 
         self.alien_points = int(self.alien_points * self.score_scale)
